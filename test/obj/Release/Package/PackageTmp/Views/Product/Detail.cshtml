@@ -1,0 +1,31 @@
+﻿@model test.Models.Product
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="container">
+    
+        
+            <div style="color:orange; font-size:20px">@Model.ProductName</div>
+            <div class="row">
+                <div class="col">
+                    <img src="@Model.Image" class=" img-fluid" alt="..." style="max-width: 90%;">
+                </div>
+                <div class="col-9">
+                    <div class="row">Mã SP: <p style="color:red">Id sản phẩm:@Model.ProductID</p></div>
+                    <div class="row"><p style="color: crimson; font-weight: bold; font-size: 20px">Giá: @Model.Price VNĐ</p> </div>
+                    <div class="row"><p >Còn hàng: @Model.Active chiếc</p></div>
+                    <div class="row"><p style="color:red">Tên hãng: @Model.Brand.BrandName</p></div>
+                    <div class="row"><p style="color:red">Loại tai nghe: @Model.Category.CategoryName</p></div>
+                    <div class="row"><p style="color:red">Tình trạng: @Model.AvailabilityStatus</p></div>
+                    <div class="row">
+                        <div class="col" style="border:1px;"><input type="number" min="0" /></div>
+                        <div class="col-9"><button class=" btn btn-primary"><a href="~/home/cart/@Model.ProductID " style="color:white;text-decoration:none;">Mua Ngay</a></button></div>
+                    </div>
+                </div>
+            </div>       
+    <div class="scrollspy-example" ><p>@Model.Information</p></div>
+    
+</div>

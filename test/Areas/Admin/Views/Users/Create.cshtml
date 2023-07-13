@@ -1,0 +1,39 @@
+﻿@model test.ViewModel.RegisterVM
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Username)
+            @Html.TextBoxFor(temp => temp.Username, new { placeholder = "Tên tài khoản", @class = "form-control" })
+            @Html.ValidationMessageFor(temp => temp.Username)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Email)
+            @Html.TextBoxFor(temp => temp.Email, new { placeholder = "Email", @class = "form-control" })
+            @Html.ValidationMessageFor(temp => temp.Email)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Password)
+            @Html.PasswordFor(temp => temp.Password, new { placeholder = "Mật khẩu", @class = "form-control" })
+            @Html.ValidationMessageFor(temp => temp.Password)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.ConfirmPassword)
+            @Html.PasswordFor(temp => temp.ConfirmPassword, new { placeholder = "Nhập lại mật khẩu", @class = "form-control" })
+            @Html.ValidationMessageFor(temp => temp.ConfirmPassword)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(temp => temp.Mobile)
+            @Html.TextBoxFor(temp => temp.Mobile, new { placeholder = "Số điện thoại", @class = "form-control" })
+            @Html.ValidationMessageFor(temp => temp.Mobile)
+        </div>
+
+    </div>
+    <button type="submit" class="btn btn-success">Đăng ký</button>
+}

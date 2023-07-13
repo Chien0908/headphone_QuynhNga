@@ -1,0 +1,26 @@
+﻿body {
+}
+.dropdown_menu  {
+    padding-left:1px;
+    
+}
+.dropdown_menu li{   
+    list-style: none;
+    border-bottom:solid 1px #969696;
+    height:42px;
+    width:211px;
+    padding-top:8px;
+}
+.dropdown_menu li a{   
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-left:15px;
+    
+}
+#combobox_loc{
+   background-color: #f0f0f0;
+   margin-top:10px;
+   margin-bottom:10px;
+}

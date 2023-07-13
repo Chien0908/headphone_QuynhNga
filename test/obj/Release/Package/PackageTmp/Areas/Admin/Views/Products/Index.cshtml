@@ -1,0 +1,33 @@
+﻿@model List<test.Models.Product>
+@{
+    ViewBag.Title = "Products";
+    
+}
+
+
+<h2>Sản Phẩm</h2>
+
+<div class="row">
+    <div style="margin:auto; width:140px; height: 40px; background-color: crimson; border-radius: 4px; padding-top: 8px" class="col-md-4">
+        <a style="text-decoration: none; color: #fff" href="/admin/products/create">Thêm Sản Phẩm</a>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-5 g-4" style="padding-top: 20px">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 15.8rem">
+            <a ><img src="@item.Image" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title"><a style="text-decoration: none; color: #505050; font-size: 17px">@item.ProductName</a></h5>
+                <p style="color: crimson; font-weight: bold; font-size: 20px" class="card-text">@item.Price</p>
+            </div>
+            <div>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID, controller = "products", area = "Admin" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID, controller = "products", area = "Admin" })
+            </div>
+        </div>
+    }
+</div>
+
+

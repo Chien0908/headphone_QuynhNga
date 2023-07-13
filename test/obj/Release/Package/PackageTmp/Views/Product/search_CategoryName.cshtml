@@ -1,0 +1,130 @@
+﻿@model List<test.Models.Product>
+@{
+    ViewBag.Title = "search_CategoryName";
+    Layout = "~/Views/shared/_LayoutPage1.cshtml";
+}
+
+
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/search_ProductName.css">
+</head>
+<div class="content">
+    <nav id="nav-hori">
+        <div class="container">
+            <div class="row">
+                <div id="main-menu" class="dropdown col">
+                    <a href="~/product/index"><button class="dropbtn " type="button">DANH MỤC SẢN PHẨM</button></a>
+
+                </div>
+                <div id="search" class="col-md-5 ">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search" action="/product/search_ProductName/">
+                            <input class="form-control me-2" type="search" placeholder="Search" id="search" name="search">
+                            <button class="btn btn-outline-success" type="submit"><i class="fab fa-sistrix"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div id="hotline-top" class="col">
+                    <p><i class="fas fa-phone"></i>  Gọi ngay 0969009843 | 098772268</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <ul class="dropdown_menu">
+                <li style="background-color: #f00;"><a class="dropdown_item" href="#"> <i class="fas fa-fire"></i> KHUYẾN MẠI HOT</a></li>
+
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+In+Ear"><i class="fas fa-headphones"></i> Tai nghe In Ear</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Bluetooth"><i class="fas fa-headphones"></i> Tai nghe Bluetooth</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+DJ"><i class="fas fa-headphones"></i> Tai nghe DJ</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Custom"><i class="fas fa-headphones"></i> Tai nghe Custom</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Ear+Bud"><i class="fas fa-headphones"></i> Tai nghe Ear Bud</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Chống+Ồn"><i class="fas fa-headphones"></i> Tai nghe Chống Ồn</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Thể+Thao"><i class="fas fa-headphones"></i> Tai nghe Thể Thao</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Chơi+Game"><i class="fas fa-headphones"></i> Tai nghe Chơi Game</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Clip+On"><i class="fas fa-headphones"></i> Tai nghe Clip On</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-10">
+            <div>
+                <a>Trang chủ ></a><a>
+
+                    Sản phẩm
+
+                </a>
+            </div>
+
+            <div class="img-fluid">
+                <img src="/img/banner/13_Sep4db70da4ddb6277195283998882c895b.png" style="max-width:100%" />
+            </div>
+            <div id="combobox_loc">
+                <div class="dropdown col">
+                    <a>Hiển thị: </a>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sắp xếp sản phẩm
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Sắp xếp sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="/product/search_CategoryName?SortColumn=Thấp đến Cao">Thấp đến cao</a></li>
+                        <li><a class="dropdown-item" href="/product/search_CategoryName?SortColumn=Cao đến thấp">Cao đến thấp</a></li>
+                        <li><a class="dropdown-item" href="/product/search_CategoryName?SortColumn=Tên: A-Z">Tên: A-Z</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div>@ViewBag.info</div>
+            <div class="row row-cols-1 row-cols-md-5 g-4" style="padding-left:10px">
+                @foreach (var item in Model)
+                {
+                    <div class="card" style="width: 15.8rem">
+                        <a href="~/product/detail/@item.ProductID"><img src="@item.Image" class="card-img-top" alt="@item.ProductName"></a>
+                        <div class="card-body">
+                            <h5 class="card-title"><a style="text-decoration: none; color: #505050; font-size: 17px">@item.ProductName</a></h5>
+                            <p style="color: crimson; font-weight: bold; font-size: 20px" class="card-text">@item.Price</p>
+                        </div>
+
+                    </div>
+                }
+            </div>
+            <div style="padding-top: 30px;">
+                <td colspan="9">
+                    <ul class="pagination justify-content-center">
+                        @for (int i = 0; i < ViewBag.NoOfPages; i++)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="/product/index?SortColumn=@ViewBag.SortColumn&page=@(i+1)">
+                                    @(i + 1)
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </td>
+            </div>
+        </div>
+    </div>
+</div>
+

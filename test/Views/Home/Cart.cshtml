@@ -1,0 +1,93 @@
+﻿@model test.Models.Product
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="container">
+    <div style="font-weight:bold">Trang chủ > Giỏ hàng </div>
+    <div class="row" >
+        <div class="col-8" style="border:1px solid black;">
+            <div class="row" style="font-weight: bold; font-size: 20px; background-color: #0197D6; height: 40px; text-transform: uppercase; color: #fff; padding-left: 10px; padding-top: 5px; ">1. GIỎ HÀNG</div>
+            <div class="row">
+                <div class="col" style="border-bottom:1px solid black;">
+                    <div>TÊN SẢN PHẨM</div>
+                    <div style="font-weight: bold; font-size: 15px">@Model.ProductName</div>
+                </div>
+                <div class="col" style="border-bottom:1px solid black;">
+                    <div>SỐ LƯỢNG</div>
+                    <div class="col" style="border:1px;"><input type="number" min="0" /></div>
+                </div>
+                <div class="col" style="border-bottom:1px solid black;">
+                    <div>ĐƠN GIÁ</div>
+                    <div>@Model.Price Đ</div>
+                </div>
+                <div class="col" style="border-bottom:1px solid black;">              
+                    <div>THÀNH TIỀN</div>
+                    <div>@Model.Price Đ</div>
+                </div>
+                <div class="col" style="border-bottom:1px solid black;">
+                    <div>XÓA</div>
+                    <div><i class="fas fa-trash-alt"></i></div>
+                </div>
+            </div>
+            <div style="font-weight: bold; color:red" class="row">Tổng tiền: @Model.Price đ</div>
+            <div class="row">Phí ship: Free</div>
+            <div class="row" style="color: red; font-weight: bold;font-size:20px">Thanh toán: @Model.Price đ </div>
+            <a href="~/home/index" class="btn btn-danger" style="float:right">Tiếp tục mua</a>
+        </div>
+
+        <div class="col-4" style="border:1px solid black;">
+            <div class="row" style="font-weight: bold; font-size: 20px; background-color: #0197D6; height: 40px; text-transform: uppercase; color: #fff; padding-left: 10px; padding-top: 5px; ">1. THÔNG TIN THANH TOÁN</div>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        Họ và tên*:
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Họ và tên người nhận hàng" />
+                    </div>
+                    <div class="row">
+                        Số điện thoại*:
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Dùng để liên lạc khi nhận hàng" />
+                    </div>
+                    <div class="row">
+                        Email*:
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Để nha65nt hông báo đơn hàng" />
+                    </div>
+                    <div class="row">
+                        Địa chỉ*:
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Địa chỉ nhận hàng" />
+                    </div>
+                    <div class="row">
+                        ghi chú*:
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Ghi chú khách hàng" />
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Thanh toán online qua VNPAY
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Đặt hàng thanh toán sau
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-danger"><a href="~/home/index " style="color:white;text-decoration:none;">Thanh toán</a></button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

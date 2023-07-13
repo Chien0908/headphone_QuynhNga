@@ -1,0 +1,107 @@
+﻿@model test.Models.Product
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayoutPage1.cshtml";
+}
+
+<h2>Edit</h2>
+
+
+<form action="/admin/products/edit/@Model.ProductID" method="post">
+    <input type="hidden" name="ProductID" value="@Model.ProductID" />
+    <div class="row">
+        <div class="col-md-6">
+            <label for="ProductName">Tên Sản Phẩm</label>
+            <input type="text"
+                   class="form-control"
+                   id="ProductName"
+                   name="ProductName"
+                   placeholder="Tên Sản Phẩm"
+                   value="@Model.ProductName" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="Price">Giá Bán</label>
+            <input type="number"
+                   class="form-control"
+                   id="Price"
+                   name="Price"
+                   placeholder="Giá Bán"
+                   value="@Model.Price" />
+        </div>
+        <div class="col-md-6">
+            <label for="Information">Mô Tả</label>
+            <input type="text"
+                   class="form-control"
+                   id="Information"
+                   name="Information"
+                   placeholder="Mô Tả"
+                   value="@Model.Information" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="DateOfPurChase">Ngày up</label>
+            <input type="date"
+                   class="form-control"
+                   id="DateOfPurChase"
+                   name="DateOfPurChase"
+                   placeholder="Ngày up"
+                   value="@Model.DateOfPurChase" />
+        </div>
+        <div class="col-md-6">
+            <label for="AvailabilityStatus">Tình trạng</label>
+            <input type="text"
+                   class="form-control"
+                   id="AvailabilityStatus"
+                   name="AvailabilityStatus"
+                   placeholder="Tình trạng"
+                   value="@Model.AvailabilityStatus" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="CategoryID"> mã loại sản phẩm</label>
+            <input type="text"
+                   class="form-control"
+                   id="CategoryID"
+                   name="CategoryID"
+                   placeholder="mã loại sản phẩm"
+                   value="@Model.CategoryID" />
+        </div>
+        <div class="col-md-6">
+            <label for="BrandID">Mã Nhãn Hiệu</label>
+            <input type="text"
+                   class="form-control"
+                   id="BrandID"
+                   name="BrandID"
+                   placeholder="Mã Nhãn Hiệu"
+                   value="@Model.BrandID" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="Active">Số lượng</label>
+            <input type="text"
+                   class="form-control"
+                   id="Active"
+                   name="Active"
+                   placeholder="Số lượng"
+                   value="@Model.Active" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="image">Mã hình ảnh</label>
+            <input type="text"
+                   class="form-control"
+                   id="Image"
+                   name="Image"
+                   placeholder="Mã hình ảnh"
+                   value="@Model.Image" />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Sửa sản phẩm</button>
+    <a href="/admin/products" class="btn btn-danger">Trở về</a>
+</form>

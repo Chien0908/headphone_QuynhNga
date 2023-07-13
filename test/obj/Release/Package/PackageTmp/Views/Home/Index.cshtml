@@ -1,0 +1,173 @@
+﻿@model List<test.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_LayoutPage1.cshtml";
+}
+
+
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/index.css">
+</head>
+<div class="content">
+    <nav id="nav-hori">
+        <div class="container">
+            <div class="row">
+                <div id="main-menu" class="dropdown col">
+                    <a href="~/product/index"><button class="dropbtn " type="button">DANH MỤC SẢN PHẨM</button></a>
+
+                </div>
+                <div id="search" class="col-md-5 ">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search" action="/product/search_ProductName/">
+                            <input class="form-control me-2" type="search" placeholder="Search" id="search" name="search">
+                            <button class="btn btn-outline-success" type="submit"><i class="fab fa-sistrix"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div id="hotline-top" class="col">
+                    <p><i class="fas fa-phone"></i>  Gọi ngay 0969009843 | 098772268</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <ul class="dropdown_menu">
+                <li style="background-color: #f00;"><a class="dropdown_item" href="#"> <i class="fas fa-fire"></i> KHUYẾN MẠI HOT</a></li>
+
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+In+Ear"><i class="fas fa-headphones"></i> Tai nghe In Ear</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Bluetooth"><i class="fas fa-headphones"></i> Tai nghe Bluetooth</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+DJ"><i class="fas fa-headphones"></i> Tai nghe DJ</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Custom"><i class="fas fa-headphones"></i> Tai nghe Custom</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Ear+Bud"><i class="fas fa-headphones"></i> Tai nghe Ear Bud</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Chống+Ồn"><i class="fas fa-headphones"></i> Tai nghe Chống Ồn</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Thể+Thao"><i class="fas fa-headphones"></i> Tai nghe Thể Thao</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Chơi+Game"><i class="fas fa-headphones"></i> Tai nghe Chơi Game</a>
+                </li>
+                <li style="background-color: #0096d6; ">
+                    <a href="~/product/search_CategoryName/?search=Tai+nghe+Clip+On"><i class="fas fa-headphones"></i> Tai nghe Clip On</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-9" id="banner_top">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="7000">
+                        <img src="/img/banner/02_Nov0765a23ea56d755dd09c2b59304e3b8d.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="/img/banner/13_Jun6249e20fde273f2ef175582c9e5263a9.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/img/banner/14_Decadc4379e6992defa97cb5a9491e4bee8.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/banner/20_Jul7be5d79c0876c7323d7731aac6b141ac.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a><img src="/img/banner/23_Nov692965cd2405ba4502197e977a992cb1.png"></a>
+        </div>
+        <div class="col">
+            <a><img src="/img/banner/29_Sep5c814999765e9e746c77f6eff1635e26.png"></a>
+        </div>
+        <div class="col">
+            <a><img src="/img/banner/29_Sep288947184775d0dd348f08cc7d4e8356.png"></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <h4 style="font-weight:bold">HÃNG TAI NGHE</h4>
+            <div class="col">
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width:200px;border:0" name=" search" value="">Tất cả các hãng</button></form></div>
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width: 200px; border: 0" name="search" value="Sony">Sony</button></form></div>
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width: 200px; border: 0" name="search" value="Kz">kz</button></form></div>
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width: 200px; border: 0" name="search" value="Harman / Kardon">Harman / Kardon</button></form></div>
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width: 200px; border: 0" name="search" value="Akg">Akg</button></form></div>
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width: 200px; border: 0" name="search" value="MoonDrop">MoonDrop</button></form></div>
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width: 200px; border: 0" name="search" value="Beats">Beats</button></form></div>
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width: 200px; border: 0" name="search" value="JBL">JBL</button></form></div>
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width: 200px; border: 0" name="search" value="B&O">B&O</button></form></div>
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width: 200px; border: 0" name="search" value="Bose">Bose</button></form></div>
+                <div class="row"><form style="padding-top:10px"><button type="submit" style="width: 200px; border: 0" name="search" value="7Hz Audio">7Hz Audio</button></form></div>
+
+
+
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-5 g-4" style="padding-left:10px;padding-top:10px">
+                    @foreach (var item in Model)
+                    {
+                        <div class="card" style="width: 15.8rem">
+                            <a href="~/product/detail/@item.ProductID"><img src="@item.Image" class="card-img-top" alt="@item.ProductName"></a>
+                            <div class="card-body">
+                                <h5 class="card-title"><a style="text-decoration: none; color: #505050; font-size: 17px">@item.ProductName</a></h5>
+                                <p style="color: crimson; font-weight: bold; font-size: 20px" class="card-text">@item.Price</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div style="padding-top: 30px;">
+            <td colspan="9">
+                <ul class="pagination justify-content-center">
+                    @for (int i = 0; i < ViewBag.NoOfPages; i++)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="/home/index?SortColumn=@ViewBag.SortColumn&page=@(i+1)">
+                                @(i + 1)
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </td>
+        </div>
+
+
+    </div>
+    <div>
+    </div>
+</div>
+
+
+
+
+
+

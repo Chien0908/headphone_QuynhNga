@@ -1,0 +1,63 @@
+﻿@model test.Models.Product
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayoutPage1.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "products", new { area = "Admin" }, FormMethod.Post, new { enctype = "multipart/dorm-data" }))
+{
+    <div class="row">
+        
+        <div class="col-md-6">
+            @Html.LabelFor(row => row.ProductName)
+            @Html.TextBoxFor(row => row.ProductName, new { @class = "form-control", placeholder = "Tên Sản Phẩm" })
+            @Html.ValidationMessageFor(row => row.ProductName)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(row => row.Price)
+            @Html.TextBoxFor(row => row.Price, new { @class = "form-control", placeholder = "Giá Bán" })
+            @Html.ValidationMessageFor(row => row.Price)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(row => row.Information)
+            @Html.TextBoxFor(row => row.Information, new { @class = "form-control", placeholder = "Mô Tả" })
+            @Html.ValidationMessageFor(row => row.Information)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(row => row.DateOfPurChase)
+            @Html.TextBoxFor(row => row.DateOfPurChase, new { @class = "form-control", placeholder = "Ngày" })
+            @Html.ValidationMessageFor(row => row.DateOfPurChase)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(row => row.AvailabilityStatus)
+            @Html.TextBoxFor(row => row.AvailabilityStatus, new { @class = "form-control", placeholder = "tình trạng" })
+            @Html.ValidationMessageFor(row => row.AvailabilityStatus)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(row => row.CategoryID)
+            @Html.TextBoxFor(row => row.CategoryID, new { @class = "form-control", placeholder = "ID loại" })
+            @Html.ValidationMessageFor(row => row.CategoryID)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(row => row.BrandID)
+            @Html.TextBoxFor(row => row.BrandID, new { @class = "form-control", placeholder = "ID Nhãn hiệu" })
+            @Html.ValidationMessageFor(row => row.BrandID)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(row => row.Active)
+            @Html.TextBoxFor(row => row.Active, new { @class = "form-control", placeholder = "active" })
+            @Html.ValidationMessageFor(row => row.Active)
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(row => row.Image)
+            @Html.TextBoxFor(row => row.Image, new { @class = "form-control", placeholder = "Hình ảnh" })
+            @Html.ValidationMessageFor(row => row.Image)      
+        </div>
+        
+    </div>
+    
+    <button type="submit" class="btn btn-success">Thêm sản phẩm</button>
+    <a href="/admin/products" class="btn btn-danger">Trở về</a>
+}

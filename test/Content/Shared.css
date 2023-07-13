@@ -1,0 +1,230 @@
+﻿body {
+}
+.main{
+    width: auto;      
+}
+#head-top{
+    background-color: black;
+    width: auto;
+    margin: 0 auto;
+    
+}
+
+#head-top a{
+    text-decoration: none;   
+    color: white;
+    font-weight: bold;
+    
+}
+#menu  li{
+    display: inline-block ;
+    padding-left: 30px;
+    list-style: none;
+    
+}
+#menu  li a{
+    text-decoration: none;
+    
+}
+.sma{
+    font-size: 15px;
+    color: black;
+}
+/*==============================*/
+#logo a img{ width: 200px;height: 40xp;}
+#chedo ul{
+    margin: auto;
+    list-style: none;
+}
+#chedo ul li{
+    display: inline-block ;
+    padding-left: 60px;
+    padding-top: 20px;
+}
+#chedo ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0096d6;
+    
+    
+}
+#chedo ul li a i{   
+    font-size: 40px;
+    padding-top: 10px;  
+    position: absolute;
+}
+#chedo ul li a p{
+   padding-left: 60px;
+   margin: 0;
+    
+}
+#logo2 img{ 
+    height: 100px;width: 100px;
+    position: absolute;
+    z-index: 1;
+    padding-top: 7px;
+    padding-left: 7px;
+}
+#img1{
+    position: absolute;
+    z-index: -1;
+}
+#word-up a{
+    text-decoration: none;
+    color: white;
+    padding-left: 110px;
+    padding-top: 10px;
+    position: absolute;
+    z-index: 1;
+}
+#word-down {
+    padding-left:110px ;
+    padding-top: 50px;
+}
+#word-down a{
+    text-decoration: none;
+    position: absolute;
+    z-index: 2;
+    padding-left:10px ;
+    padding-right:10px;
+    background-color: aliceblue;
+}
+/*==============================*/
+.content{
+    background-color: #f0f0f0;
+}
+.dropbtn{
+    background-color: #0096d6;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: none;
+    padding: 16px;
+}
+.dropbtn :hover ul{
+    display: block;
+}
+.dropdown-menu li{   
+    background-color: #89d6f7;
+}
+.dropdown-item{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#search{
+    width: 500px;
+    padding-top: 5px;
+}
+#hotline-top{
+    font-weight: bold;
+    padding-top: 8px;
+}
+.ppocta{
+    position: fixed;
+    top: 350px;
+    right: 10px;    
+}
+.icon_poc{
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    border: 1px white;
+    background-color: #0096d6;
+    vertical-align: middle;
+    
+}
+.icon_poc a img{
+    padding-top: 0px;
+    vertical-align: middle;
+}
+.hh{
+    height: 2000px;
+    
+}
+/*==============================*/
+.footer-top{
+    border-top: solid 1px #969696;
+    border-bottom: solid 1px #969696;
+    background-color:#fafafa ;
+    font-size: 14px;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+.box-footer-button{
+    background-color:white;
+    border: 2px solid rgb(85, 84, 84);
+    border-radius: 5%;
+    margin: 10px 10px  10px ;
+    text-decoration: none; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;   
+}
+#icon_footer ul{
+    list-style: none;
+    padding-top: 20px;
+}
+#icon_footer ul li{
+    list-style: none;
+    display: inline;
+    padding-left: 5px;
+}
+#icon_footer img{
+    height: 30px;
+    width: 30px;   
+}
+
+.footer-mid{
+    margin-top: 15px;
+    border-bottom: solid 1px #969696;
+}
+#pt_thanhtoan ul{
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 0px;
+}
+#pt_thanhtoan ul li{
+    list-style: none;
+    display: inline;
+    padding-left: 10px;
+}
+#pt_thanhtoan img{
+    height: 35px;
+    width: 60px;   
+    border:1px solid #ccc;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+#bocongthuong ul{
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 0px;
+
+}
+#bocongthuong ul li{
+    list-style: none;
+    display: inline;
+    padding-left: 10px;
+}
+#bocongthuong ul li a{
+    font-size: 14px;
+}
+#bocongthuong img{
+    height: 50px;
+    width: 160px;     
+    vertical-align: middle; 
+}
+#input_email{
+    padding-top: 25px;
+    padding-left: 0px;
+}
+.footer-bottom{
+    font-size: 13px;
+}
+.footer-bottom img{
+    height: 120px;
+    width: 100px;
+}

@@ -1,0 +1,33 @@
+﻿@model List<test.Identity.AppUser>
+@{
+    ViewBag.Title = "User";
+}
+
+<h2>User</h2>
+<div class="row">
+    <div style="margin:auto; width:140px; height: 40px; background-color: crimson; border-radius: 4px; padding-top: 8px" class="col-md-4">
+        <a style="text-decoration: none; color: #fff" href="~/account/register">Thêm Users</a>
+    </div>
+</div>
+<table class="table table-bordered">
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Mobile</th>
+
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.UserName</td>
+        <td>@item.Email</td>
+        <td>@item.PhoneNumber</td>
+        <td>
+            
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id, controller = "users", area = "Admin" })
+        </td>
+    </tr>
+    }
+</table>
+

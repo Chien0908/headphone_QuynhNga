@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Shared.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+<body>
+    <div class="main">
+        <div class="head">
+            <div id="head-top">
+                <div class="row head-top">
+                    <div class="col-7">
+                        <ul id="menu">
+                            <li class="first-home">
+                                <a href="/home/index"><i class="	fas fa-home"></i></a>
+                            </li>
+                            <li>
+                                <a href="#">tin tức</a>
+                            </li>
+                            <li>
+                                <a href="#">liên hệ</a>
+                            </li>
+                            <li>
+                                <a href="#">hướng dẫn mua hàng</a>
+                            </li>
+                            <li>
+                                <a href="#">giờ mở cửa: 8h - 21h</a>
+                            </li>
+                            <li>
+                                <a href="/Admin/users">admin bruh</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <a href="#"><i class="fa fa-shopping-basket "></i> Giỏ hàng</a>
+                    </div>
+                    <div class="col-3">
+                        
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                             <a href="~/account/Logout"> Đăng xuất</a>
+                        }
+                        else
+                        {
+                            <a href="~/account/register"><i class="fa fa-user-circle"></i> Đăng ký </a><a>|</a>
+                            <a href="~/account/login">  Đăng nhập </a>
+                        }
+                         @if (User.Identity.IsAuthenticated)
+                        {
+                            
+                            <a style="color:red;font-weight:bold">
+                                <i class="fa fa-user-circle"></i>
+                                @User.Identity.Name
+                            </a>
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div id="head-mid">
+                <div class="container-xl">
+                    <div class="row">
+                        <div id="logo" class="col-1"><a href="/home/index"><img src="/img/headphone_store__1_-removebg-preview-removebg-preview.png" alt="quynh nga audio"></a></div>
+                        <div class="col-8" id="chedo">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="	fas fa-shipping-fast"></i>
+
+                                        <p>GIAO HÀNG</p>
+                                        <p class="fw-semibold sma">nhanh 30 phút</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="	far fa-calendar-alt"></i>
+
+                                        <p>30 NGÀY</p>
+                                        <p class="fw-semibold sma">trả hàng</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="	fas fa-tools"></i>
+
+                                        <p>BẢO HÀNH</p>
+                                        <p class="fw-semibold sma">nhanh chóng</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-2">
+                            <div id="img1"><img src="/img/311077786_5444820465572599_5228805490576534423_n.jpg" alt=""></div>
+                            <div id="logo2"><img src="/img/quynh nga.png" alt=""></div>
+                            <div id="word-up">
+                                <a href="" class="fw-bold">Quỳnh Nga Audio</a>
+                            </div>
+                            <div id="word-down">
+                                <a role="button" class="" href="#"><i class="fab fa-facebook-square"></i> Thích trang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+
+                </div>
+                <div class="col-9">
+
+                </div>
+            </div>
+        </div>
+        <div class="ppocta">
+            <div class="icon_poc"><a id="messengerButton" href=""><img src="/img/m-fb.png" alt=""></a></div>
+            <div class="icon_poc"><a id="zaloButton" href=""><img src="/img/zalo.png" alt=""></a></div>
+            <div class="icon_poc"><a id="callButton" href=""><img src="/img/phone-call.png" alt=""></a></div>
+        </div>
+        <div>@RenderBody()</div>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="fw-semibold fs-6">Quỳnh Nga Audio</div>
+                            <div>Giới thiệu hệ thống cửa hàng</div>
+                            <div>Tuyển dụng</div>
+                            <div>Tài khoản ngân hàng</div>
+                        </div>
+                        <div class="col">
+                            <div class="fw-semibold fs-6">Chính sách & Quy định</div>
+                            <div>Chính sách bảo hành</div>
+                            <div>Chính sách đổi trả hàng</div>
+                            <div>Khách hàng thân thiết</div>
+                        </div>
+                        <div class="col">
+                            <div class="fw-semibold fs-6">Hướng dẫn sử dụng</div>
+                            <div>Hướng dẫn mua hàng</div>
+                            <div>Hướn dẫn thanh toán</div>
+                            <div>Hướng dẫn mua hàng trả góp</div>
+                        </div>
+                        <div class="col">
+                            <div class="fw-semibold fs-6">Tổng đài hỗ trợ</div>
+                            <div>0989008645 | 97974945738</div>
+                            <div>Email: chientrang.50@gmail.com</div>
+                            <div>Giờ mở cửa từ 8h -21h</div>
+                        </div>
+                        <div class="col">
+
+
+                            <div class="row"><a class="box-footer-button" href=""> <i class="	fas fa-angle-double-up"></i> Về đầu trang</a></div>
+                            <div class="row"><a class="box-footer-button" rel="nofollow" style="white-space: nowrap;"> <i class="fas fa-mobile-alt"></i> Xem bản mobile</a></div>
+                            <div class="row" id="icon_footer">
+                                <ul>
+                                    <li><a>Kết nối</a> </li>
+                                    <li><img src="/img/icons8-facebook-48.png" alt="icons8-facebook-48"></li>
+                                    <li><img src="/img/icons8-youtube-48.png" alt="icons8-youtube-48"></li>
+                                    <li><img src="/img/icons8-instagram-48.png" alt="icons8-instagram-48"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-mid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3" id="pt_thanhtoan">
+                            <ul>
+                                <li><img src="/img/images/mastercard.png" alt="mastercard"></li>
+                                <li><img src="/img/images/visa.png" alt="visa"></li>
+                                <li><img src="/img/images/tienmat.png" alt="tienmat"></li>
+                                <li><img src="/img/images/ck_ft.png" alt="ck_ft"></li>
+                            </ul>
+                        </div>
+                        <div class="col-5" id="bocongthuong">
+                            <ul>
+                                <li><a>Chứng nhận Website</a></li>
+                                <li><img src="/img/images/HeXCMKuLyHCzmaKrdo-I8C6l8vAiyQtM4w.png" alt="mastercard"></li>
+                                <li><img src="/img/images/dmca_protected_16_120.png" alt="visa"></li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <div id="input_email">
+                                <form class="d-flex" role="search">
+                                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Nhập email để nhận khuyến mãi">
+                                    <button class="btn btn-outline-success" type="submit">Gửi</i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col"><img src="/img/images/kamen-rider-zero-one-real-x-time.jpg" alt=""></div>
+                                <div class="col">
+                                    <div class="row">Quỳnh Nga Bình Tân</div>
+                                    <div class="row"></div>
+                                    <div class="row">Mở cửa: 8h - 21h</div>
+                                    <div class="row">Số máy lẻ: 1</div>
+                                    <div class="row"><a href="#">Bản đồ đường đi</a></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col"><img src="/img/images/Kamen-Rider-Zero-One.jpg" alt=""></div>
+                                <div class="col">
+                                    <div class="row">Quỳnh Nga Tân Phú</div>
+                                    <div class="row"></div>
+                                    <div class="row">Mở cửa: 8h - 21h</div>
+                                    <div class="row">Số máy lẻ: 3</div>
+                                    <div class="row"><a href="#">Bản đồ đường đi</a></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col"><img src="/img/images/kamen-rider-gaim.png" alt=""></div>
+                                <div class="col">
+                                    <div class="row">Quỳnh Nga Quận 1</div>
+                                    <div class="row"></div>
+                                    <div class="row">Mở cửa: 8h - 21h</div>
+                                    <div class="row">Số máy lẻ: 2</div>
+                                    <div class="row"><a href="#">Bản đồ đường đi</a></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col"><img src="/img/images/fe109b5dd86a50a247b028f889722972.jpg" alt=""></div>
+                                <div class="col">
+                                    <div class="row">Quỳnh Nga Gò Vấp</div>
+                                    <div class="row"></div>
+                                    <div class="row">Mở cửa: 8h - 21h</div>
+                                    <div class="row">Số máy lẻ: 1</div>
+                                    <div class="row"><a href="#">Bản đồ đường đi</a></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

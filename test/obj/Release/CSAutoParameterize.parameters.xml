@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MyCS-Web.config Connection String" description="MyCS Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\data_QuynhNgaAudio.mdf;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrator-PC\\Desktop\\code_web_btl\\test\\test\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyCS']/@connectionString" />
+  </parameter>
+  <parameter name="test.Identity.AppDbContext-Web.config Connection String" description="test.Identity.AppDbContext Connection String used in web.config by the application to access the database." defaultValue="test.Identity.AppDbContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrator-PC\\Desktop\\code_web_btl\\test\\test\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='test.Identity.AppDbContext']/@connectionString" />
+  </parameter>
+</parameters>

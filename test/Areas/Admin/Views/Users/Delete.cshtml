@@ -1,0 +1,22 @@
+﻿@model test.Identity.AppUser
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<form action="/admin/users/delete/@Model.Id" method="post">
+    <input type="hidden" name="IDSanPham" value="@Model.Id" />
+    <table class="table">
+        <tr>
+            <th>Tên tài khoản</th>
+            <th>@Model.UserName</th>
+        </tr>
+        <tr>
+            <th>email</th>
+            <th>@Model.Email</th>
+        </tr>
+    </table>
+    <button type="submit" class="btn btn-danger">Xóa user</button>
+    <a href="/admin/users" class="btn btn-danger">Trở về</a>
+</form>

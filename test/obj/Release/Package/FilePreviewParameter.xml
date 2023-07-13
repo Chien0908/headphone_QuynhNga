@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="chien0908-001-site1" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Administrator-PC\\Desktop\\code_web_btl\\test\\test\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Administrator-PC\\Desktop\\code_web_btl\\test\\test\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="chien0908-001-site1/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Administrator-PC\\Desktop\\code_web_btl\\test\\test\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="MyCS-Web.config Connection String" description="" value="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\data_QuynhNgaAudio.mdf;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrator-PC\\Desktop\\code_web_btl\\test\\test\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyCS']/@connectionString" />
+  </parameter>
+  <parameter name="test.Identity.AppDbContext-Web.config Connection String" description="" value="test.Identity.AppDbContext_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrator-PC\\Desktop\\code_web_btl\\test\\test\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='test.Identity.AppDbContext']/@connectionString" />
+  </parameter>
+</parameters>
